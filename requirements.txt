@@ -1,0 +1,7 @@
+flask
+transformers
+torch
+pdfplumber
+nltk
+pandas
+werkzeug

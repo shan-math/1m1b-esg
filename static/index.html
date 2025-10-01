@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ESG Dashboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>ESG Analyzer — Dashboard</h1>
+    </header>
+
+    <nav class="menu">
+      <button id="nav-upload">Upload Report</button>
+      <button id="nav-company">Company Snapshots</button>
+      <button id="nav-comparative">Comparative Risk</button>
+    </nav>
+
+    <main>
+      <!-- Upload view -->
+      <section id="view-upload" class="view">
+        <h2>Upload Report</h2>
+        <input type="file" id="fileInput" accept=".pdf" />
+        <div>
+          <button id="uploadBtn">Upload</button>
+        </div>
+        <div id="uploadedInfo" class="box"></div>
+        <div id="analyzeControls" style="display:none" class="box">
+          <label>Company name (optional): 
+            <input id="companyOverride" placeholder="CompanyName (optional)" />
+          </label>
+          <button id="analyzeBtn">Analyze this file</button>
+        </div>
+        <div id="uploadStatus" class="box"></div>
+      </section>
+
+      <!-- Company snapshot view -->
+      <section id="view-company" class="view" style="display:none">
+        <h2>Company Snapshots</h2>
+        <label>Choose company:
+          <select id="companySelect"></select>
+        </label>
+        <div id="companySnapshot" class="box"></div>
+      </section>
+
+      <!-- Comparative view -->
+      <section id="view-comparative" class="view" style="display:none">
+        <h2>Comparative Risk Scorecard</h2>
+        <div id="comparativeArea" class="box"></div>
+      </section>
+    </main>
+
+    <footer>Local demo — uses your local model & CSVs</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

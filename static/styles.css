@@ -1,0 +1,96 @@
+:root {
+  --bg: #050d1b;
+  --card: #0f1d33;
+  --accent: #34c3ff;
+  --muted: #9fb3c9;
+  --panel: #0b1526;
+  --text: #e6f5ff;
+  --glow: 0 0 8px rgba(52,195,255,0.6);
+}
+
+body {
+  background: radial-gradient(circle at top left, #0a1628, #030911 80%);
+  color: var(--text);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin:0; padding:0;
+}
+
+.container { max-width:1100px; margin:18px auto; padding:20px; }
+
+header h1 { margin:0 0 12px 0; font-size:22px; color:var(--accent); text-shadow: var(--glow); }
+
+.menu {
+  display:flex; gap:10px; margin-bottom:16px;
+}
+.menu button {
+  background:var(--card);
+  border:1px solid rgba(255,255,255,0.08);
+  color:var(--text);
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  transition: all 0.25s ease;
+  box-shadow: var(--glow);
+}
+.menu button:hover {
+  background: var(--accent);
+  color:#000;
+  transform: translateY(-2px);
+}
+
+.view {
+  background: var(--panel);
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:14px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.6);
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.box {
+  margin-top:12px; padding:14px;
+  background:rgba(255,255,255,0.03);
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+#companySnapshot {
+  display:flex; gap:24px; flex-wrap:wrap;
+  align-items:flex-start; padding:16px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:10px;
+}
+
+.snapshot-left h3 {
+  font-size:20px; margin:8px 0; 
+  color: var(--accent); text-shadow: var(--glow);
+}
+
+.snapshot-list { margin-top:8px; }
+
+.comp-card {
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background: var(--card);
+  border:1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 0 10px rgba(52,195,255,0.15);
+}
+.comp-title {
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:6px;
+  color: var(--accent);
+}
+.comp-foot {
+  margin-top:8px;
+  font-size:13px;
+  color: var(--muted);
+}
+
+footer {
+  margin-top:16px;
+  opacity:0.7;
+  font-size:12px;
+  text-align:center;
+}
